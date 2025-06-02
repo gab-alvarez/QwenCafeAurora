@@ -1,0 +1,170 @@
+:root {
+    --color-fondo: #f5f0e6;
+    --color-primario: #8b6f47;
+    --color-secundario: #c1a57b;
+    --color-texto: #3d2c1f;
+    --color-hover: #efe5db;
+    --font-main: 'Segoe UI', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+main {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a5f3a;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Lista de productos */
+#listaProductos {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: var(--color-hover);
+}
+
+.producto-check {
+    margin-right: 10px;
+}
+
+/* Botones dentro de producto */
+li button {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+#contadorSeleccionados {
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Media Queries */
+
+/* Tablets y pantallas medianas */
+@media (min-width: 768px) {
+    nav {
+        gap: 30px;
+    }
+
+    .hero {
+        font-size: 1.2rem;
+    }
+
+    li {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 992px) {
+    body {
+        padding: 40px;
+    }
+
+    .hero {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+}

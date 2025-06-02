@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Menú - Café Aurora</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Café Aurora - Menú</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <input type="text" id="filtro" placeholder="Buscar producto..." />
+        </section>
+
+        <section id="seccionAgregar" class="hidden">
+            <h3>Agregar Nuevo Producto</h3>
+            <label>Nombre: <input type="text" id="nombreProducto"/></label>
+            <label>Precio: <input type="number" id="precioProducto"/></label>
+            <button id="btnGuardarNuevo">Guardar</button>
+        </section>
+
+        <button id="btnAgregar">Agregar Producto</button>
+
+        <div id="contadorSeleccionados">Productos seleccionados: 0</div>
+
+        <ul id="listaProductos">
+            <!-- Ejemplo inicial -->
+            <li data-nombre="Café Expresso">
+                <input type="checkbox" class="producto-check"/>
+                <span>Café Expresso</span> - $3.50
+                <button class="btnModificar">Modificar</button>
+                <button class="btnQuitar">Quitar</button>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Café Aurora</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacto - Café Aurora</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Café Aurora - Contacto</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="formularioContacto">
+            <label>Nombre:
+                <input type="text" id="nombre" required />
+                <span class="error" id="errorNombre"></span>
+            </label>
+
+            <label>Email:
+                <input type="email" id="email" required />
+                <span class="error" id="errorEmail"></span>
+            </label>
+
+            <label>Mensaje:
+                <textarea id="mensaje" required></textarea>
+                <span class="error" id="errorMensaje"></span>
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Café Aurora</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contacto-script.js"></script>
+</body>
+</html>
